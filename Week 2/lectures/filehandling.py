@@ -1,10 +1,10 @@
 # Open the file in read-only mode
-pwd = open('passwords.txt','r')
+pwd = open('bootcamp/Week 2/lectures/passwords.txt','r')
 
 print(pwd)
 
 # Read the contents of the file
-actual_file = pwd.read()
+actual_file = pwd.read();
 # Print the contents
 print(actual_file)
 
