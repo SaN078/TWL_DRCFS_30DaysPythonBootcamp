@@ -4,8 +4,8 @@ def add_contact(name: str, email: str, phone: int) -> bool:
     with open('contact.txt','a') as file:
         file.write(','.join((name,email,str(phone))))
         file.write('\n')
-        return 1
-    return 0
+        return True
+    return False
 
 def find_contact(username: str) -> list:
     with open('contact.txt','r') as file:
@@ -83,7 +83,7 @@ def check_int_type(inp: Any) -> int:
     try:
         inp = int(inp)
         return inp
-    except Exception as exception:
+    except ValueError as exception:
         print('\n'+'#'*100)
         print('Conversion Error. The following exception was thrown: ' + str(exception))
         print("Invalid option, please only enter integers and kindly omit other details. Restarting the program....")
@@ -96,7 +96,7 @@ def main():
     '''
     print('#'*60)
     print('Welcome to My Contact Management System')
-    print('#'*60)
+    print('#'*60);
 
     while True:
         print('*'*80)
