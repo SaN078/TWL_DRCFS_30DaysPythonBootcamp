@@ -69,7 +69,7 @@ def print_all():
             print(f'Name: {contact[0]}')
             print(f'Email: {contact[1]}')
             print(f'Phone: {contact[2]} \n')
-    except exception as e:
+    except Exception as e:
         print('No Contacts found.. INVALID FILE PATH. Please change the Relative path of the file in code to run it in windows properly')
 
 def check_int_type(inp: Any) -> int:
