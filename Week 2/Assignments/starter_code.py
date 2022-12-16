@@ -47,6 +47,7 @@ def rank(pwd: str) -> str:
         contains_digits,
         contains_lowercase,
         contains_specials,
+
     )
 
     req_counter = 0
@@ -83,7 +84,10 @@ def option1():
     for username_pwds in username_passwords:
         username, password = username_pwds.split(",")
         password_rank = rank(password)
+        username = username.strip()
+        password = password.strip()
         output_list.append([username, password, password_rank])
+        
 
     with open(USER_PASSWORDS_WRITE, "w") as file:
         for val in output_list:
@@ -166,7 +170,7 @@ def option2():
 
     user_wants_to_write = input(
         "Do you want to write username and password to file? (Y/N)"
-    ).lower()
+            ).lower()
     if user_wants_to_write == "y":
         with open(USER_PASSWORDS_WRITE, "w") as file:
             val_str = ",".join(username, password, password_rank)
