@@ -89,7 +89,6 @@ def option1():
         for val in output_list:
             val_str = ",".join(val)
             file.write(val_str)
-            file.write("\n")
 
     ## END CODE HERE
 
@@ -171,8 +170,8 @@ def option2():
     if user_wants_to_write == "y":
         with open(USER_PASSWORDS_WRITE, "w") as file:
             val_str = ",".join(username, password, password_rank)
-            file.write(val_str)
-            file.write("\n")
+            file.write(val_str+"\n")
+            
     elif user_wants_to_write == "n":
         print("The generated details are as follows:")
         print(username, password, password_rank)
