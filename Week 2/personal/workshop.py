@@ -1,4 +1,5 @@
 import constant
+import string
 
 print("There are currently " + str(constant.STUDENT_COUNT) + " number of participants")
 print("There are currently" + str(constant.CURRENT_MENTOR_COUNT) + "number of mentors")
@@ -27,3 +28,6 @@ def cube(numm):
     result = numm * numm * numm
     return result
 
+variable = 'abc'
+
+print(variable in string.ascii_uppercase)
